@@ -1,4 +1,4 @@
-# First Token
+# First Token Solidity Contract
 
 This Solidity program is a simple token created in a smart contract. The purpose of this program is to learn and practice the solidity programming language syntax and have a practical grasp of transactions with tokens.
 
