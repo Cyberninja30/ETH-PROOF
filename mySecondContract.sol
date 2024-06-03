@@ -27,7 +27,7 @@ contract MySecondContract {
         emit Mint(_address, _value);
     }
 
-    // Function to burn tokens i.e. to destroy or erase the tokens
+    // Function to burn tokens i.e. to destroy or erase the tokens from the current amount
     function burn(address _address, uint _value) public {
         require(balances[_address] >= _value, "Insufficient balance to burn");
         totalSupply -= _value;
