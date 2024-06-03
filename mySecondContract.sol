@@ -15,19 +15,19 @@ contract MySecondContract {
     mapping(address => uint) public balances;
 
     // Event to log minting activity
-    event Mint(address indexed to, uint256 value);
+    event Mint(address indexed to, uint256 value);    
 
     // Event to log burning activity
     event Burn(address indexed from, uint256 value);
 
-    // Function to mint new tokens
+    // Function to mint new tokens i.e. to create new tokens
     function mint(address _address, uint _value) public {
         totalSupply += _value;
         balances[_address] += _value;
         emit Mint(_address, _value);
     }
 
-    // Function to burn tokens
+    // Function to burn tokens i.e. to destroy or erase the tokens
     function burn(address _address, uint _value) public {
         require(balances[_address] >= _value, "Insufficient balance to burn");
         totalSupply -= _value;
